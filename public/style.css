@@ -21,7 +21,7 @@ a
   
 a:hover 
 {
-    color: #3486eb;
+    color: #4bdb78;
 }
   
 button 
@@ -65,12 +65,12 @@ button
   
 .delete-post-btn 
 {
-    background-color: #d41414;
+    background-color: #ffa3a3;
 }
   
 .delete-post-btn:hover 
 {
-    background-color: #ff643d;
+    background-color: #ff3300;
 }
   
 .edit-post-form 
@@ -80,7 +80,7 @@ button
   
 .footer 
 {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ffc0c0;
     display: flex;
     justify-content: center;
     padding: 1%;
@@ -89,7 +89,7 @@ button
   
 .header 
 {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ffc0c0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,7 +112,7 @@ button
 {
     font-style: italic;
     font-size: 90%;
-    color: #7d7d7d;
+    color: #6b4f4f;
 }
   
 .post-list 
@@ -137,7 +137,7 @@ textarea, input
 textarea:focus, input:focus 
 {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid #34eb40;
 }
   
 textarea 
