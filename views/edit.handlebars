@@ -1,4 +1,5 @@
 <article>
+  <!--<link rel="stylesheet" href="../../public/style.css">-->
   <a href="/dashboard" class="is-pulled-right"> &larr; Return to dashboard</a>
   <h2 class="title mt-5">Edit post</h2>
   <hr>
@@ -9,7 +10,7 @@
     </div>
     <div>
       <label for="post-content">Post Content:</label>
-      <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
+      <textarea class="textarea" name="post-content">{{post.post_content}}</textarea>
     </div>
     <div class="is-pulled-right">
       Created on {{format_date post.created_at}} |
@@ -22,6 +23,6 @@
 
 {{> comments post.comments}}
 
-<script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+<script src="/scripts/edit-post.js"></script>
+<script src="/scripts/delete-post.js"></script>
+<script src="/scripts/comment.js"></script>

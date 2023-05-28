@@ -1,20 +1,20 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
+const { Post, Users, Comments } = require('../models');
 const auth = require('../helpers/auth');
 
 const getPostData = () => ({
   attributes: ['id', 'title', 'created_at', 'post_content'],
   include: [
     {
-      model: Comment,
+      model: Comments,
       attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
       include: {
-        model: User,
+        model: Users,
         attributes: ['username', 'twitter', 'github']
       }
     },
     {
-      model: User,
+      model: Users,
       attributes: ['username', 'twitter', 'github']
     }
   ]
@@ -52,7 +52,7 @@ router.get('/edit/:id', auth, (req, res) => {
 
       const post = dbPostData.get({ plain: true });
 
-      res.render('edit-post', {
+      res.render('edit', {
         post,
         loggedIn: true
       });
