@@ -81,7 +81,7 @@ router.get('/post/:id', async (req, res) => {
 
     const post = dbPostData.get({ plain: true });
 
-    res.render('new-post', {
+    res.render('view-post', {
       post,
       loggedIn: req.session.loggedIn,
     });
