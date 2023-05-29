@@ -11,12 +11,12 @@
       <label for="post-content">Post Content:</label>
       <textarea class="textarea" id="post-content" name="post-content">{{post.post_content}}</textarea>
     </div>
-    <div class="is-pulled-right">
+    <div>
       Created on {{format_date post.created_at}} |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comments" post.comments.length}}</a>
     </div>
-    <button type="submit" class="button is-success">Save post</button>
-    <button type="button" class="button is-danger delete-post-btn">Delete post</button>
+    <button type="submit" class="button">Save post</button>
+    <button type="button" class="button delete-post-btn">Delete post</button>
   </form>
 </article>
 

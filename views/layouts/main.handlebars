@@ -13,13 +13,13 @@
       <h1 class="has-text-black px-3 py-3 has-text-weight-bold">Tech Blog</h1>
       <nav class="navbar mt-2">
         {{#if loggedIn}}
-          <a href="/" class="navbar-item is-hoverable pt-1">Homepage</a>
-          <a href="/dashboard" class="navbar-item is-hoverable pt-1">Dashboard</a>
-          <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4">Create Post</a>
-          <button id="logout" class="button is-danger">Logout</button>
+          <a href="/" class="pt-1 a">Homepage</a>
+          <a href="/dashboard" class="pt-1 a">Dashboard</a>
+          <a href="/dashboard/create/" class="pt-1 mr-4 a">Create Post</a>
+          <button id="logout" class="button is-warning">Logout</button>
         {{else}}
-          <a href="/" class="navbar-item is-hoverable pt-1">Homepage</a>
-          <a href="/login" class="button is-primary">Login</a>
+          <a href="/" class="navbar-item pt-1 a">Homepage</a>
+          <a href="/login" class="button a">Login</a>
         {{/if}}
       </nav>
     </header>

@@ -3,15 +3,15 @@
 {{#if loggedIn}}
   <form class="comment-form" id="comment-form">
     <div>
-      <textarea class="ml-5" name="comment-body" id="comment-body"></textarea>
+      <textarea name="comment-body" id="comment-body"></textarea>
     </div>
 
     <div>
-      <button class="button is-warning ml-5 mb-5" type="submit">Add comment</button>
+      <button type="submit">Add comment</button>
     </div>
   </form>
 
   {{> comments post.comments}}
 
-  <script src="/scripts/comment.js"></script>
+  <script src="/scripts/comments.js"></script>
 {{/if}}
