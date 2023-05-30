@@ -2,7 +2,6 @@ const Users = require('./Users');
 const Post = require('./Post');
 const Comments = require('./Comments');
 
-// Create associations
 Users.hasMany(Post, {
   foreignKey: 'user_id'
 });
@@ -16,7 +15,8 @@ Comments.belongsTo(Users, {
 });
 
 Comments.belongsTo(Post, {
-  foreignKey: 'post_id'
+  foreignKey: 'post_id',
+  onDelete: 'CASCADE',
 });
 
 Users.hasMany(Comments, {
@@ -24,7 +24,8 @@ Users.hasMany(Comments, {
 });
 
 Post.hasMany(Comments, {
-  foreignKey: 'post_id'
+  foreignKey: 'post_id',
+  onDelete: 'CASCADE',
 });
 
 module.exports = {
