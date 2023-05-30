@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column">
         <p>
-          <a href="/post/{{id}}" class="has-text-black a">{{title}}</a>
+          <a href="/post/{{id}}" class="has-text-black">{{title}}</a>
         </p>
       </div>
       <div class="column"></div>
@@ -12,9 +12,8 @@
   <div class="card-content">
     <div class="has-text-grey">{{post_content}}</div>
     <div>
-      {{users.username}}
-      {{format_date created_at}}
-      <a href="/post/{{id}}">{{comments.length}} {{"comments" comments.length}}</a>
+      | {{format_date created_at}} |
+      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>
   </div>
 </div>
