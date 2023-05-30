@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
     const posts = dbPostData.map((post) => post.get({ plain: true }));
 
     res.render('landing-page', {
-      posts,
+      ...posts,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -82,7 +82,7 @@ router.get('/post/:id', async (req, res) => {
     const post = dbPostData.get({ plain: true });
 
     res.render('view-post', {
-      post,
+      ...post,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
