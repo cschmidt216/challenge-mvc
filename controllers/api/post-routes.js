@@ -36,11 +36,8 @@ router.get('/:id', async (req, res) => {
         id: req.params.id
       },
       attributes: ['id', 'title', 'created_at', 'post_content'],
+      order: [['created_at', 'DESC']],
       include: [
-        {
-          model: Users,
-          attributes: ['username', 'twitter', 'github']
-        },
         {
           model: Comments,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -48,6 +45,10 @@ router.get('/:id', async (req, res) => {
             model: Users,
             attributes: ['username', 'twitter', 'github']
           }
+        },        
+        {
+          model: Users,
+          attributes: ['username', 'twitter', 'github']
         }
       ]
     });

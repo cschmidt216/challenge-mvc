@@ -1,5 +1,7 @@
-{{#each posts as |post|}}
-  {{> posts post }}
+{{#if posts.length}}
+  {{#each posts as |post|}}
+    {{> posts post}}
+  {{/each}}
 {{else}}
   <h6>There are no posts.</h6>
-{{/each}}
+{{/if}}

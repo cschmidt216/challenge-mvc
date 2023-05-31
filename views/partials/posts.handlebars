@@ -14,8 +14,7 @@
     <div>
       {{users.username}}
       {{format_date created_at}}
-      <a href="/post/{{id}}">{{comments.length}} Comments</a>
+      <a>{{comments.length}} Comments</a>
     </div>
   </div>
-  {{> comments post.comments}}
 </div>
